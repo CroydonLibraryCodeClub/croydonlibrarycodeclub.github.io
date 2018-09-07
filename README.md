@@ -55,3 +55,8 @@ xfconf-query -c xfce4-desktop -p /desktop-icons/center-text -n -t bool -s false
 # Fixing audio on Scratch2 and flashplugin
 
 Remove `./asoundrc`
+
+# Fixing engrampa errors
+```
+yaourt -R engrampa-thunar-plugin
+```
