@@ -1,0 +1,31 @@
+print("The sequel to the infinity war quiz...")
+print("\n") 
+print("To test your marvel knowledge...")
+print("\n") 
+print("The best guess game of all time...")
+print("\n") 
+print("The Marvel Knowledge Game!!!")
+print("\n") 
+print("Hero Number 1")
+
+print("This hero is a man.")
+print("\n") 
+print("He appears in the first avenger film, where he has a battle with Captain America")
+print("\n") 
+print("He wields a weapon only the most worth can hold")
+print("\n") 
+print("Finally, he is known as the Odinson")
+print("\n") 
+print("What hero am I describing")
+print("\n") 
+print("Is it A. Thor")
+print("B.Iron Man")
+print("C.Hulk")
+print("D.SpiderMan")
+choice = input("Type in a letter to guess: ")
+
+if choice == "A" or choice == "a":
+    print("Well done, that's right!")
+    score = score + 1
+else:
+    print("Wrong, wrong, wrong! The correct answer is . Thor ")

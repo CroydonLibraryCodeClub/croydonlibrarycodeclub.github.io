@@ -1,0 +1,5 @@
+print("hello there, fellow user")
+hello=input()
+print("what is your name")
+nmae=input()
+print("I hope you are ready to start your intelligence test "+ name)

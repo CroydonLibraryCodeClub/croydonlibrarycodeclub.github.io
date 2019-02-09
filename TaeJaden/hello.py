@@ -1,0 +1,26 @@
+print ("hello")
+hello=input()
+print("What is your name")
+name=input()
+print("How are you today " + name)
+x = input()
+
+if "not good" in x:print("That's no good")
+else:print("that's good")
+print("Are you ready to sign up for community work?")
+answer1=input()
+if "no" in answer1:
+    print("oh, would you like to sign up another day?")
+    answer3=input()
+    if "yes" in answer3:print("ok, just login another day to sign up")
+
+else:
+    print("Please enter your postcode here")
+    postcode=input()
+    print("Uploading, please wait")
+    print("")
+    print("")
+    print("")
+    print("your postcode has been uploaded. your cleaning supplies will be sent to you by tomorrow")
+    Thankyou=input()
+    print("You are welcome, goodbye "+ name)
