@@ -45,7 +45,7 @@ git config --global user.name "cc01"
 ```
 # Installing sonic-pi
 ```
-yaourt -Syua sonic-pi jack qjackctl
+yaourt -Syua sonic-pi jack2
 ```
 # Fixing desktop text shadow
 ```
