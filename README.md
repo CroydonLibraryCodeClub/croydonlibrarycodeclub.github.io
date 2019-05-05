@@ -43,20 +43,10 @@ Setting the git user name and email:
 git config --global user.email "croydoncodeclub@powered-up-games.com"
 git config --global user.name "cc01"
 ```
-# Installing sonic-pi
-```
-yaourt -Syua sonic-pi jack2
-```
-# Fixing desktop text shadow
-```
-xfconf-query -c xfce4-desktop -p /desktop-icons/center-text -n -t bool -s false
-```
+# Fixing sonic-pi
+Sonic Pi should now work with the stock installs, but with the ideapad laptops you need to add a file to stop jack defaulting to realtime and loading the HDMI device. Copy the file `.jackdrc` in this repo to the `codeclub` home directory.
 
-# Fixing audio on Scratch2 and flashplugin
-
-Remove `./asoundrc`
-
-# Fixing engrampa errors
 ```
-yaourt -R engrampa-thunar-plugin
+/usr/bin/jackd -r -d alsa -d hw:Generic,0
 ```
+The `-r` option prevents jack from needing realtime permissions. `-d alsa` tells jack to select the alsa driver. The remaining options are sent to the alsa driver itself. `-d hw:Generic,0` selects the onboard audio rather than the HDMI output on the ideapad laptops.
