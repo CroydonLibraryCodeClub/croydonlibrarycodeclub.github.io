@@ -1,0 +1,71 @@
+<DOCTYPE! html>
+	<html>
+
+	<head>
+		<title>Code club information</title>
+		<style>
+			body {
+				font-family: sans-serif;
+				padding: 30px;
+			}
+
+			.header {
+				font-size: 36px;
+				font-weight: 700;
+				text-align: center;
+				padding: 30px;
+				color: white;
+				background-color: #60bf55;
+			}
+
+			.column {
+				float: left;
+				padding: 10px;
+			}
+
+			.column.side {
+				width: 25%;
+			}
+
+			.column.middle {
+				width: 50%;
+			}
+
+			@media screen and (max-width: 600px) {
+
+				.column.side,
+				.column.middle {
+					width: 100%;
+				}
+			}
+
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="header">Croydon Central Library code club</div>
+		<div class="row">
+			<div class="column side"><p><a href="index.html">Home</a></p></div>
+			<div class="column middle">
+				<p>Code clubs are targeted at children between the ages of 9 and 13. Ours runs from 9.30 to 10.30 on Saturday mornings in the children's library, and is free to attend.</p>
+				<p>Your child will need their own library card and be registered as a user of the library WiFi. You can do this at the registration desk on the day if you need to. If your child has their own laptop they can use it with the library WiFi otherwise we can usually provide one.</p>
+				<p>Children also need their own Scratch account which you can sign up for <a href="http://scratch.mit.edu/">here</a> or they can sign up on the day. To sign up, they will need:<ul>
+						<li>a parent or guardian's email address, which you will need to verify</li>
+						<li>an account name (that is not their own name)</li>
+						<li>a password</li>
+					</ul>
+				</p>
+				<p>We recommend you keep a copy of their account name and password in case they lose or forget it.</p>
+				<p>Send an email to <a href="mailto:paul.sinnett@gmail.com">paul.sinnett@gmail.com</a> in the first instance to check availability and to add yourself to my address book. I will send out an email in advance if we are unable to run the club on any given Saturday.</p>
+			</div>
+			<div class="column side"></div>
+		</div>
+	</body>
+
+	</html>
