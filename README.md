@@ -1,8 +1,64 @@
-## Respository for the web site
+# Croydon library code club website
+
+## Repository for the web site
 
 Add HTML and other files to show up on the https://croydonlibrarycodeclub.github.io website.
 
-# Library laptop notes
+## Library laptop notes
+
+Laptop info:
+```
+Lenovo ideapad 310-15ABR
+Carrizo [1002:9874] (rev ca)
+```
+
+Create a USB key with an MX linux ISO on it, I used [MX-18.2_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/).
+
+Reboot the laptop and mash the F2 key with the Fn button held down to get into the BIOS.
+
+Change the boot order to boot from USB.
+
+When the launcher comes up, select the default option, but press the `e` key to edit the boot options. Add `nomodeset` onto the end of the linux boot line. This prevents a problem with the windows not repainting correctly on the desktop during installation.
+
+Now run the installer.
+
+Choose English UK keyboard with extended Windows keys.
+
+For partitioning choose entire hard drive and default options for partitions and GRUB.
+
+For computer name I used `cc01` to `cc10`.
+
+For domain: `codeclub`
+
+Untick SAMBA.
+
+Locale: `en_GB.UTF-8`
+
+Tick System clock uses LOCAL
+
+Timezone: `Europe/London`
+
+Default user login: `codeclub`
+Deafult user password: `codeclub`
+
+Admin password (check email)
+
+Tick autologin
+
+Reboot and remove USB.
+
+MX welcome: tick don't show at start up.
+
+Login to wifi.
+
+Click package icon to do full upgrade.
+
+Install sonic-pi through synaptic.
+
+
+
+
+
 
 After a default Manjaro installation, the laptop will beep on boot, to prevent this, add a file `/etc/modprobe.d/nobeep.conf`:
 ```
