@@ -28,7 +28,7 @@ For partitioning choose entire hard drive and default options for partitions and
 
 For computer name I used `cc01` to `cc10`.
 
-For domain: `codeclub`
+For domain leave the default `example.dom`
 
 Untick SAMBA.
 
@@ -39,9 +39,7 @@ Tick System clock uses LOCAL
 Timezone: `Europe/London`
 
 Default user login: `codeclubadmin`
-Deafult user password:
-
-Admin password (check email)
+Deafult user password and admin password (check email)
 
 Tick autologin
 
@@ -59,20 +57,26 @@ Install qjackctl.
 
 Compile scanner driver.
 
-Uncomment stretch backports in `/etc/apt/sources.list.d/debian.list` 
+Uncomment stretch backports in `/etc/apt/sources.list.d/debian.list`
 
 Force package for Gnome network manager to the latest.
+
+Apply
+
+Re-comment the stretch line.
 
 # Setting up git
 
 Cloning StudentFiles in the home directory, enter:
 ```
 git clone git://github.com/CroydonLibraryCodeClub/StudentFiles.git
+git clone git://github.com/CroydonLibraryCodeClub/croydonlibrarycodeclub.github.io.git
 ```
 
 Reconfigure the remote to use ssh with the command:
 ```
 git remote set-url origin git@github.com:CroydonLibraryCodeClub/StudentFiles.git
+git remote set-url origin git@github.com:CroydonLibraryCodeClub/croydonlibrarycodeclub.github.io.git
 ```
 
 Generate a key for the machine:
