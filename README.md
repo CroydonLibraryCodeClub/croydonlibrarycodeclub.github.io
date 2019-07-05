@@ -1,29 +1,90 @@
-## Respository for the web site
+# Croydon library code club website
+
+## Repository for the web site
 
 Add HTML and other files to show up on the https://croydonlibrarycodeclub.github.io website.
 
-# Library laptop notes
+## Library laptop notes
 
-After a default Manjaro installation, the laptop will beep on boot, to prevent this, add a file `/etc/modprobe.d/nobeep.conf`:
+Laptop info:
 ```
-blacklist pcspkr
+Lenovo ideapad 310-15ABR
+Carrizo [1002:9874] (rev ca)
 ```
 
-Hibernate does not currently work, so to force a shutdown when the lid is closed, in file `/etc/systemd/logind.conf` add the line:
-```
-HandleLidSwitch=poweroff
-```
+Create a USB key with an MX linux ISO on it, I used [MX-18.2_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/).
+
+Reboot the laptop and mash the F2 key with the Fn button held down to get into the BIOS.
+
+Change the boot order to boot from USB.
+
+When the launcher comes up, select the default option, but press the `e` key to edit the boot options. Add `nomodeset` onto the end of the linux boot line. This prevents a problem with the windows not repainting correctly on the desktop during installation.
+
+Now run the installer.
+
+Choose English UK keyboard with extended Windows keys.
+
+For partitioning choose entire hard drive and default options for partitions and GRUB.
+
+For computer name I used `cc01` to `cc10`.
+
+For domain leave the default `example.dom`
+
+Untick SAMBA.
+
+Locale: `en_GB.UTF-8`
+
+Tick System clock uses LOCAL
+
+Timezone: `Europe/London`
+
+Default user login: `codeclubadmin`
+Deafult user password and admin password (check email)
+
+Tick autologin
+
+Reboot and remove USB.
+
+MX welcome: tick don't show at start up.
+
+Login to wifi.
+
+Click package icon to do full upgrade.
+
+Install sonic-pi through synaptic.
+
+Install qjackctl.
+
+## Downgrade kernel
+
+The latest kernel (4.19) doesn't appear to work well with the wifi driver. To downgrade, open the `MX Package Installer` and install kernel `4.14` then open the `MX Tools` and set the machine to boot to 4.14.
+
+## Possibly not needed with Kernel 4.14... test with next upgrade
+
+Uncomment stretch backports in `/etc/apt/sources.list.d/debian.list`
+
+Force package for Gnome network manager to the latest.
+
+Apply
+
+Re-comment the stretch line.
+
+## TODO
+
+Compile scanner driver.
 
 # Setting up git
 
 Cloning StudentFiles in the home directory, enter:
 ```
 git clone git://github.com/CroydonLibraryCodeClub/StudentFiles.git
+git clone git://github.com/CroydonLibraryCodeClub/croydonlibrarycodeclub.github.io.git
 ```
 
 Reconfigure the remote to use ssh with the command:
 ```
 git remote set-url origin git@github.com:CroydonLibraryCodeClub/StudentFiles.git
+git remote set-url origin git@github.com:CroydonLibraryCodeClub/croydonlibrarycodeclub.github.io.git
 ```
 
 Generate a key for the machine:
@@ -44,9 +105,4 @@ git config --global user.email "croydoncodeclub@powered-up-games.com"
 git config --global user.name "cc01"
 ```
 # Fixing sonic-pi
-Sonic Pi should now work with the stock installs, but with the ideapad laptops you need to add a file to stop jack defaulting to realtime and loading the HDMI device. Copy the file `.jackdrc` in this repo to the `codeclub` home directory.
-
-```
-/usr/bin/jackd -r -d alsa -d hw:Generic,0
-```
-The `-r` option prevents jack from needing realtime permissions. `-d alsa` tells jack to select the alsa driver. The remaining options are sent to the alsa driver itself. `-d hw:Generic,0` selects the onboard audio rather than the HDMI output on the ideapad laptops.
+Sonic Pi should now work with the stock installs, but you need to run qjackctl first.
