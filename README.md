@@ -59,6 +59,10 @@ Install qjackctl.
 
 The latest kernel (4.19) doesn't appear to work well with the wifi driver. To downgrade, open the `MX Package Installer` and install kernel `4.14` then open the `MX Tools` and set the machine to boot to 4.14.
 
+## Remove annoying beep
+
+In a terminal open `alsamixer` and mute beep channel.
+
 ## Possibly not needed with Kernel 4.14... test with next upgrade
 
 Uncomment stretch backports in `/etc/apt/sources.list.d/debian.list`
