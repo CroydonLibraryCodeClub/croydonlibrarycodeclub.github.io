@@ -55,7 +55,11 @@ Install sonic-pi through synaptic.
 
 Install qjackctl.
 
-Compile scanner driver.
+## Downgrade kernel
+
+The latest kernel (4.19) doesn't appear to work well with the wifi driver. To downgrade, open the `MX Package Installer` and install kernel `4.14` then open the `MX Tools` and set the machine to boot to 4.14.
+
+## Possibly not needed with Kernel 4.14... test with next upgrade
 
 Uncomment stretch backports in `/etc/apt/sources.list.d/debian.list`
 
@@ -64,6 +68,10 @@ Force package for Gnome network manager to the latest.
 Apply
 
 Re-comment the stretch line.
+
+## TODO
+
+Compile scanner driver.
 
 # Setting up git
 
