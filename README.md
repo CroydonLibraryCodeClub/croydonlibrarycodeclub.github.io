@@ -22,7 +22,7 @@ When the launcher comes up, select the default option, but press the `e` key to 
 
 Now run the installer.
 
-Choose English UK keyboard with extended Windows keys.
+Choose 105 Intl keyboard + English UK keyboard with no variant.
 
 For partitioning choose entire hard drive and default options for partitions and GRUB.
 
@@ -41,8 +41,6 @@ Timezone: `Europe/London`
 Default user login: `codeclubadmin`
 Deafult user password and admin password (check email)
 
-Tick autologin
-
 Reboot and remove USB.
 
 MX welcome: tick don't show at start up.
@@ -58,6 +56,12 @@ Install qjackctl.
 ## Downgrade kernel
 
 The latest kernel (4.19) doesn't appear to work well with the wifi driver. To downgrade, open the `MX Package Installer` and install kernel `4.14` then open the `MX Tools` and set the machine to boot to 4.14.
+
+## Create a user account
+
+Use `MX Tools` user manager to create a codeclub account with the password of `codeclub`. Make sure it doesn't have to sudo group.
+
+Edit the file `/etc/lightdm/lightdm.conf` and set the autologin to `codeclub`
 
 ## Remove annoying beep
 
