@@ -20,7 +20,10 @@ Change the boot order to boot from USB.
 
 When the launcher comes up, select the default option, but press the `e` key to edit the boot options. Add `nomodeset` onto the end of the linux boot line. This prevents a problem with the windows not repainting correctly on the desktop during installation.
 
-Now run the installer.
+Now run the installer. If it fails with `failed to create partition` then run the command:
+```
+sudo apt update && sudo apt install mx-installer
+```
 
 Choose 105 Intl keyboard + English UK keyboard with no variant.
 
