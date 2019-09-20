@@ -82,10 +82,7 @@ Re-comment the stretch line.
 
 ## Scanner setup
 
-Download the driver here:
-https://www.canon.co.uk/support/consumer_products/products/scanners/lide_series/canoscan-lide-300.html?type=drivers&language=&os=windows%2010%20(64-bit)
-
-And install.
+Download the driver [here](https://www.canon.co.uk/support/consumer_products/products/scanners/lide_series/canoscan-lide-300.html) and install.
 
 # Setting up git
 
