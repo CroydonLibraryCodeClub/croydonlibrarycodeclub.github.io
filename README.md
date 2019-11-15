@@ -117,3 +117,11 @@ git config --global user.name "cc01"
 ```
 # Fixing sonic-pi
 Sonic Pi should now work with the stock installs, but you need to run qjackctl first.
+
+# Installing Visual Studio Code
+
+Install from [this](https://go.microsoft.com/fwlink/?LinkID=760868) link.
+
+# Installing Unity
+
+Use [this](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage?_ga=2.111589954.731056823.1573857184-1379241474.1573857184) link to install the hub and then install 2018.4 LTS
