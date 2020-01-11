@@ -86,6 +86,15 @@ Download the driver [here](https://www.canon.co.uk/support/consumer_products/pro
 
 # Setting up git
 
+Setting up port forwarding for git over public WIFI:
+```
+nano ~/.ssh/config
+
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+```
+
 Cloning StudentFiles in the home directory, enter:
 ```
 git clone git://github.com/CroydonLibraryCodeClub/StudentFiles.git
