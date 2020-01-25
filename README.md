@@ -127,6 +127,13 @@ git config --global user.name "cc01"
 # Fixing sonic-pi
 Sonic Pi should now work with the stock installs, but you need to run qjackctl first.
 
+# Fix annoying keyring popup
+
+This menu usually pops up multiple times when trying to use Google Chrome.
+
+Open the `Passwords and Keys` program, right click to open the context menu for the `Login` entry, and set the password to blank.
+
+
 # Installing Visual Studio Code
 
 Install from [this](https://go.microsoft.com/fwlink/?LinkID=760868) link.
