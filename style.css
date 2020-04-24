@@ -26,6 +26,24 @@ body {
     font-weight: 700;
 }
 
+.center-figure {
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    border: 1px solid;
+}
+
+figure > img {
+    border: 10px solid white;
+}
+
+figure > figcaption {
+    text-align: right;
+    border: 10px solid white;
+}
+
 header {
     font-weight: 700;
     text-align: center;
