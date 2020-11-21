@@ -1,0 +1,4 @@
+Hello Birjis, welcome to our club.
+Please download Discord for your computer so you are ready to join in our live server on Saturday mornings.				Once you have Discord installed, you can join us live on Saturday morning between 9.30 and 10.30 by clicking on the link that you'll find at the bottom of the weekly newsletter. You will receive your first weekly newsletter on Saturday morning before the club starts. Note that the link is time limited so you will only be able to use it on that Saturday morning, but you will receive a new link each week.
+If you have any problems connecting, please let me know.
+See you soon,Paul.PS. Can you let me know how you found our club, was it via Facebook / Twitter / something else?
