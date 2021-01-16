@@ -1,0 +1,84 @@
+<DOCTYPE! html>
+	<html>
+
+	<head>
+		<title>
+			Croydon Central Library Code Club
+		</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+	</head>
+
+	<body>
+		<header>
+			<h1>
+				Croydon Central Library Code Club
+			</h1>
+		</header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="https://codeclub.org/en">HQ</a></li>
+					<li><a href="https://projects.raspberrypi.org/en/codeclub">Projects</a></li>
+					<li><a href="../about.html">About</a></li>
+					<li><a href="../join.html">Join</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../challenges.html">Challenges</a></li>
+					<li><a href="../newsletters.html">Newsletters</a></li>
+				</ul>
+			</nav>
+			<article>
+				<h2>Gallery</h2>
+				<div class="center-figure">
+					<figure>
+						<pre style="margin: 1em; white-space: pre-wrap;"><code style="font-size: 1em;">
+import random
+
+chars = 'CTHLUHU'
+
+length = input('Password length?')
+length = int(length)
+
+num = input('NUmber of passwords?')
+num = int(num)
+
+for p in range(num):
+	password = ''
+	for c in range(length):
+		password += random.choice(chars)
+	print(password)
+					</code></pre>
+						<figcaption> <a href="https://trinket.io/python3"><em>Cthulhu password generator</em> by
+								Iftekhar</a></figcaption>
+					</figure>
+					<figure>
+						<figcaption>
+							<em>Some Cthulhu passwords</em>
+						</figcaption>
+						<pre style="margin: 1em; white-space: pre-wrap;"><code style="font-size: 1em;">
+Password length? 8
+NUmber of passwords? 8
+LCLTHULH
+HUHCTLTH
+HTCTCCHL
+HTUCTULT
+TTCUHULH
+TUUHCUHH
+HLLUTHUU
+HCLHLUHH
+					</code></pre>
+					</figure>
+				</div>
+				<div class="center-figure">
+					<a href="https://scratch.mit.edu/projects/471781402/">
+						<figure>
+							<img src="../Gallery/Cthulhu/Ethan.png" alt="cthulhu encounter" />
+							<figcaption><em>cthulhu encounter</em> by Ethan, 11</figcaption>
+						</figure>
+					</a>
+				</div>
+
+				<footer></footer>
+	</body>
+
+	</html>
