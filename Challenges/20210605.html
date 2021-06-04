@@ -1,0 +1,150 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+        <title>
+            Croydon Central Library Code Club
+        </title>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                Croydon Central Library Code Club
+            </h1>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="https://codeclub.org/en">HQ</a></li>
+                    <li><a href="https://projects.raspberrypi.org/en/codeclub">Projects</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../join.html">Join</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../challenges.html">Challenges</a></li>
+                    <li><a href="../newsletters.html">Newsletters</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h2>Challenge 05/06/2021: Bubbles</h2>
+                <p>If you want to make a bubble project, you can follow the instructions on this page.</p>
+                <h3>Bubble joke</h3>
+                <p>What is a bubble’s favourite drink?</p>
+                <p><em>Pop!</em></p>
+                <h3>Bubbles project</h3>
+                <p>The instructions below describe how to make a project like this one:</p>
+                <iframe src="https://scratch.mit.edu/projects/539707916/embed" allowtransparency="true" width="485"
+                    height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                <p>Here is how to make your own bubble tank project in Scratch:</p>
+                <h4>Make a bubble</h4>
+                <ul>
+                    <li>Start a new Scratch project</li>
+                    <li>Delete the cat</li>
+                    <li>Choose a nice water background</li>
+                    <li>Create a new sprite to paint yourself</li>
+                    <li>Rename the sprite <code>bubble</code></li>
+                    <li>Choose the circle tool</li>
+                    <li>Before you draw your circle, set the colour</li>
+                    <li>Click on the <code>Fill</code> colour and make it transparent (the red line button)</li>
+                    <li>Click on the <code>Outline</code> colour and make it blue</li>
+                    <li>Draw a small circle around the centre cross. Click and drag with the mouse.</li>
+                </ul>
+                <img width="128" alt="Bubble" src="../Projects/Scratch/Bubbles/bubble.png">
+                <h4>Make your bubble float up</h4>
+                <ul>
+                    <li>Click on the <code>Code</code> tab</li>
+                    <li>Drag in a <code class="scratch-move-block">go to x: &#x25EF; y: &#x25EF;</code> block</li>
+                    <li>Type 0 in the <code>x</code> slot</li>
+                    <li>Type -180 in the <code>y</code> slot</li>
+                    <li>Add a <code class="scratch-control-block">repeat until &#x25C7;</code> block</li>
+                    <li>Drag a <code class="scratch-move-block">change y by &#x25EF;</code> block inside the loop</li>
+                    <li>This time, set the <code>y</code> slot to 10</li>
+                    <li>And drag a <code class="scratch-operators-block">&#x25EF; &gt; &#x25EF;</code>block into the
+                        until slot</li>
+                    <li>Put a blue <code class="scratch-move-block">y position</code> block into the left hand side</li>
+                    <li>And type 180 into the right hand side</li>
+                </ul>
+                <img width="256" alt="Float code" src="../Projects/Scratch/Bubbles/float_code.png">
+                <h4>Test your project</h4>
+                <p>Click your code blocks! Does your bubble float to the top?</p>
+                <h4>Clone your bubbles</h4>
+                <ul>
+                    <li>Put a <code class="scratch-control-block">when I start as a clone</code> block on top of your
+                        code</li>
+                    <li>And put a <code class="scratch-control-block">delete this clone</code> block at the bottom</li>
+                    <li>Drag a <code class="scratch-events-block">when green flag clicked</code> block to a new part of
+                        your code window</li>
+                    <li>Add a <code class="scratch-control-block">forever</code> block underneath</li>
+                    <li>And put a <code class="scratch-control-block">create clone of <em>myself</em></code> block
+                        inside</li>
+                </ul>
+                <h4>Test your project</h4>
+                <p>Click the green flag! Do you get a long stream of bubbles floating up?</p>
+                <p>Do you notice that your bubbles are all in a straight line?</p>
+                <p>Let us add some randomness.</p>
+                <h4>Add randomness</h4>
+                <ul>
+                    <li>Drag a <code class="scratch-operators-block">Pick random &#x25EF; to &#x25EF;</code> into the
+                        <code>x</code> slot of the <code>go to</code> block</li>
+                    <li>Type -20 into the left hand side</li>
+                    <li>Type 20 into the right hand side</li>
+                    <li>Insert a <code class="scratch-looks-block">set size to &#x25EF; %</code> block after the
+                        <code>when I start as a clone</code> block</li>
+                    <li>Drag another <code class="scratch-operators-block">Pick random &#x25EF; to &#x25EF;</code> into
+                        the <code>size</code> slot</li>
+                    <li>Type 50 into the left hand side</li>
+                    <li>Type 100 into the right hand side</li>
+                </ul>
+                <h4>Test your project</h4>
+                <p>Do you get a mixture of bubbles of different sizes spread around the middle of the screen?</p>
+                <p>Can you see a line of bubbles getting stuck at the top of the screen?</p>
+                <h4>Fixing the Scratch position bug</h4>
+                <p>Whenever you use a move or go to block, Scratch will attempt to make sure your sprite stays on the
+                    screen.</p>
+                <p>But to make our loop exit, we need the sprite to go off the top of the screen.</p>
+                <p>We can fix this by using a variable instead of relying on Scratch’s sprite position.</p>
+                <h4>Adding a y position variable</h4>
+                <ul>
+                    <li>Click on the orange Variables section</li>
+                    <li>Click on the <code>Make a variable</code> button</li>
+                    <li>Call the variable <code>y</code></li>
+                    <li>Make sure to click the <code>For this sprite only</code> button</li>
+                    <li>Click on <code>OK</code> to create the variable</li>
+                    <li>Insert a <code class="scratch-variables-block">set <em>y</em> to &#x25EF;</code> under the
+                        <code>when I start as a clone</code> block</li>
+                    <li>Type -180 into the new set block</li>
+                    <li>Drag the <code class="scratch-variables-block">y</code> variable block into the <code>y</code>
+                        slot of the <code>go to</code> block</li>
+                    <li>And replace the blue <code>y position</code> block with another <code
+                            class="scratch-variables-block">y</code> block</li>
+                    <li>Replace the blue <code>change y</code> block with the <code
+                            class="scratch-variables-block">change <em>y</em> by &#x25EF;</code> block</li>
+                    <li>Type 10 into the <code>y</code> slot</li>
+                    <li>Insert a <code class="scratch-move-block">set y to &#x25EF;</code></li>
+                    <li>And drag a final <code class="scratch-variables-block">y</code> block into the blue
+                        <code>set y</code> slot.</li>
+                </ul>
+                <h4>Test your project</h4>
+                <p>Your fixed code should look like this:</p>
+                <img width="320" alt="Fixed float code" src="../Projects/Scratch/Bubbles/fixed_float_code.png">
+                <p>Have you fixed the problem with the bubbles getting stuck at the top?</p>
+                <h4>Challenges</h4>
+                <ul>
+                    <li>Can you make your bubbles wobble as they float up?</li>
+                    <li>Can you improve the shading on your bubble sprite?</li>
+                    <li>Can you add sound to your project?</li>
+                    <li>Can you make bubbles start from the mouse’s position?</li>
+                </ul>
+
+                <h3>Submission</h3>
+                <p>Be sure to submit your entry before Thursday and I will include your work in next week’s newsletter.
+                    Send your first name, age, and project link to <a
+                        href="mailto:paul.sinnett@gmail.com">paul.sinnett@gmail.com</a>.</p>
+            </article>
+        </section>
+        <footer></footer>
+    </body>
+
+    </html>

@@ -37,7 +37,13 @@ code {
     font-weight: 700;
 }
 
-code.scratch-block {
+code.scratch-block,
+code.scratch-move-block,
+code.scratch-looks-block,
+code.scratch-control-block,
+code.scratch-operators-block,
+code.scratch-variables-block,
+code.scratch-events-block {
     background-color: #009b3d;
     color: white;
     display: inline-block;
@@ -48,6 +54,30 @@ code.scratch-block {
     border-radius: 1rem;
     white-space: nowrap;
     margin: 0.25rem;
+}
+
+code.scratch-move-block {
+    background-color: #4C97FF;
+}
+
+code.scratch-looks-block {
+    background-color: #9966FF;
+}
+
+code.scratch-events-block {
+    background-color: #FFBF00;
+}
+
+code.scratch-control-block {
+    background-color: #FFAB19;
+}
+
+code.scratch-operators-block {
+    background-color: #59C059;
+}
+
+code.scratch-variables-block {
+    background-color: #FF8C1A;
 }
 
 figure {
