@@ -12,22 +12,17 @@ Lenovo ideapad 310-15ABR
 Carrizo [1002:9874] (rev ca)
 ```
 
-Create a USB key with an MX linux ISO on it, I used [MX-18.2_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/).
+Create a USB key with an MX linux ISO on it, I used [MX-21_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/).
 
 Reboot the laptop and mash the F2 key with the Fn button held down to get into the BIOS.
 
 Change the boot order to boot from USB.
 
-When the launcher comes up, select the default option, but press the `e` key to edit the boot options. Add `nomodeset` onto the end of the linux boot line. This prevents a problem with the windows not repainting correctly on the desktop during installation.
-
-Now run the installer. If it fails with `failed to create partition` then run the command:
-```
-sudo apt update && sudo apt install mx-installer
-```
+Now run the installer. If it fails with `failed to create partition` then run GParted and delete all the existing partitions on sda and reboot. The admin password for the Live USB is `demo`
 
 Choose 105 Intl keyboard + English UK keyboard with no variant.
 
-For partitioning choose entire hard drive and default options for partitions and GRUB.
+For partitioning choose entire hard drive and default options for partitions and MBR.
 
 For computer name I used `cc01` to `cc10`.
 
@@ -48,17 +43,13 @@ Reboot and remove USB.
 
 MX welcome: tick don't show at start up.
 
-Login to wifi.
+Connect to network.
 
 Click package icon to do full upgrade.
 
-Install sonic-pi through synaptic.
+Install [Scratch3](https://github.com/redshaderobotics/scratch3.0-linux/releases) via GDebi.
 
-Install qjackctl.
-
-## Downgrade kernel
-
-The latest kernel (4.19) doesn't appear to work well with the wifi driver. To downgrade, open the `MX Package Installer` and install kernel `4.14` then open the `MX Tools` and set the machine to boot to 4.14.
+Note: sonic-pi through synaptic doesn't work
 
 ## Create a user account
 
@@ -66,25 +57,16 @@ Use `MX Tools` user manager to create a codeclub account with the password of `c
 
 Edit the file `/etc/lightdm/lightdm.conf` and set the autologin to `codeclub`
 
-## Remove annoying beep
-
-In a terminal open `alsamixer` and mute beep channel.
-
-## Possibly not needed with Kernel 4.14... test with next upgrade
-
-Uncomment stretch backports in `/etc/apt/sources.list.d/debian.list`
-
-Force package for Gnome network manager to the latest.
-
-Apply
-
-Re-comment the stretch line.
-
 ## Scanner setup
 
 Download the driver [here](https://www.canon.co.uk/support/consumer_products/products/scanners/lide_series/canoscan-lide-300.html) and install.
 
 # Setting up git
+
+Generate a key for the machine:
+```
+ssh-keygen -t rsa -b 4096 -C "cc01@powered-up-games.com"
+```
 
 Setting up port forwarding for git over public WIFI:
 ```
@@ -101,16 +83,12 @@ git clone git://github.com/CroydonLibraryCodeClub/StudentFiles.git
 git clone git://github.com/CroydonLibraryCodeClub/croydonlibrarycodeclub.github.io.git
 ```
 
-Reconfigure the remote to use ssh with the command:
+Reconfigure the remote to use ssh with the following commands (you must be in each directory):
 ```
 git remote set-url origin git@github.com:CroydonLibraryCodeClub/StudentFiles.git
 git remote set-url origin git@github.com:CroydonLibraryCodeClub/croydonlibrarycodeclub.github.io.git
 ```
 
-Generate a key for the machine:
-```
-ssh-keygen -t rsa -b 4096 -C "croydoncodeclub@powered-up-games.com"
-```
 
 Adding your SSH key to the ssh-agent:
 ```
@@ -121,11 +99,9 @@ Copy the public key `~/.ssh/id_rsa.pub` to GitHub.
 
 Setting the git user name and email:
 ```
-git config --global user.email "croydoncodeclub@powered-up-games.com"
+git config --global user.email "cc01@powered-up-games.com"
 git config --global user.name "cc01"
 ```
-# Fixing sonic-pi
-Sonic Pi should now work with the stock installs, but you need to run qjackctl first.
 
 # Fix annoying keyring popup
 
