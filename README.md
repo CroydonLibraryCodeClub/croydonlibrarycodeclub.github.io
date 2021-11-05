@@ -53,9 +53,7 @@ Note: sonic-pi through synaptic doesn't work
 
 ## Create a user account
 
-Use `MX Tools` user manager to create a codeclub account with the password of `codeclub`. Make sure it doesn't have to sudo group.
-
-Edit the file `/etc/lightdm/lightdm.conf` and set the autologin to `codeclub`
+Use `MX Tools` user manager to create a codeclub account with the password of `codeclub`. Make sure it doesn't have the sudo group. And tick the autologin box.
 
 ## Scanner setup
 
