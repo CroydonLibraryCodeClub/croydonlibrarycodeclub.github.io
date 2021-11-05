@@ -12,17 +12,17 @@ Lenovo ideapad 310-15ABR
 Carrizo [1002:9874] (rev ca)
 ```
 
-Create a USB key with an MX linux ISO on it, I used [MX-21_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/).
+Create a USB key with an MX linux ISO on it, I used [MX-21_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/) on Windows or the built in USB creator on Linux.
 
 Reboot the laptop and mash the F2 key with the Fn button held down to get into the BIOS.
 
 Change the boot order to boot from USB.
 
-Now run the installer. If it fails with `failed to create partition` then run GParted and delete all the existing partitions on sda and reboot. The admin password for the Live USB is `demo`
+Now run the installer. If it fails with `failed to create partition` then run GParted and create a new partition table of type `gpt` and reboot. The admin password for the Live USB is `demo`
 
 Choose 105 Intl keyboard + English UK keyboard with no variant.
 
-For partitioning choose entire hard drive and default options for partitions and MBR.
+For partitioning choose entire hard drive and default options for partitions and ESP.
 
 For computer name I used `cc01` to `cc10`.
 
