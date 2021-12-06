@@ -1,5 +1,4 @@
 import pgzrun
-import random
 
 TITLE = 'Silly Eyes'
 WIDTH = 480
