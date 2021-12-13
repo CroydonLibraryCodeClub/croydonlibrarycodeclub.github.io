@@ -1,5 +1,4 @@
 import pgzrun
-import time
 
 TITLE = 'BOO!'
 WIDTH = 480
