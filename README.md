@@ -77,8 +77,8 @@ Host github.com
 
 Cloning StudentFiles in the home directory, enter:
 ```
-git clone git://github.com/CroydonLibraryCodeClub/StudentFiles.git
-git clone git://github.com/CroydonLibraryCodeClub/croydonlibrarycodeclub.github.io.git
+git clone git@github.com:CroydonLibraryCodeClub/StudentFiles.git
+git clone git@github.com:CroydonLibraryCodeClub/croydonlibrarycodeclub.github.io.git
 ```
 
 Reconfigure the remote to use ssh with the following commands (you must be in each directory):
