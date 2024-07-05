@@ -12,7 +12,7 @@ Lenovo ideapad 310-15ABR
 Carrizo [1002:9874] (rev ca)
 ```
 
-Create a USB key with an MX linux ISO on it, I used [MX-21_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/) on Windows or the built in USB creator on Linux.
+Create a USB key with an MX linux ISO on it, I used [MX-23.3_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/) on Windows or the built in USB creator on Linux.
 
 Reboot the laptop and mash the F2 key with the Fn button held down to get into the BIOS.
 
