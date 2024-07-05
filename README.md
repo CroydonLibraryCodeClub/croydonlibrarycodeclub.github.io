@@ -14,7 +14,7 @@ Carrizo [1002:9874] (rev ca)
 
 Create a USB key with an MX linux ISO on it, I used [MX-23.3_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/) on Windows or the built in USB creator on Linux.
 
-Reboot the laptop and mash the F2 key with the Fn button held down to get into the BIOS.
+Shutdown the laptop and boot with a pin in hole on the right hand side to get into the BIOS.
 
 Change the boot order to boot from USB.
 
@@ -30,7 +30,7 @@ For domain leave the default `example.dom`
 
 Untick SAMBA.
 
-Locale: `en_GB.UTF-8`
+Locale: `United Kindom - British English`
 
 Tick System clock uses LOCAL
 
