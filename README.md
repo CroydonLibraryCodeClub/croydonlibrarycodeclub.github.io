@@ -14,7 +14,7 @@ Carrizo [1002:9874] (rev ca)
 
 Create a USB key with an MX linux ISO on it, I used [MX-23.3_x64](https://mxlinux.org/download-links/) and [Rufus](https://rufus.ie/) on Windows or the built in USB creator on Linux.
 
-Shutdown the laptop and boot with a pin in hole on the right hand side to get into the BIOS.
+Shutdown the laptop, boot, and mesh F2 (with the Fn key down) or boot with a pin in hole on the right hand side, to get into the BIOS.
 
 Change the boot order to boot from USB.
 
